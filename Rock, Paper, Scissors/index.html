@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剪刀石頭布遊戲</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>剪刀石頭布遊戲</h1>
+    <div class="choices">
+        <button class="choice" onclick="playGame('剪刀')">剪刀</button>
+        <button class="choice" onclick="playGame('石頭')">石頭</button>
+        <button class="choice" onclick="playGame('布')">布</button>
+    </div>
+    <div class="scores">
+        玩家分數：<span id="playerScore">0</span> | 電腦分數：<span id="computerScore">0</span>
+    </div>
+    <div id="result" class="result"></div>
+    <button class="reset-btn" onclick="resetGame()">重置遊戲</button>
+
+</body>
+
+</html>
+<script src="js/script.js"></script>

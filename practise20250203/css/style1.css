@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+html, body, h1, h2, h3, h4, h5, h6, div, span, header, footer, menu, nav, p, a, aside, main, img, ul, ol, li {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", serif;
+  color: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+:root {
+  --mainColor: #01C6E7;
+  --darkGray: #333333;
+  --lightGray: #AAAAAA;
+  --white: white;
+  --blackAlpha: #00000088;
+  --transition: all 600ms ease;
+}
+
+/*Header Deisgn*/
+header {
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  background-color: var(--darkGray);
+  color: var(--white);
+  margin-top: 64px;
+  position: relative;
+  z-index: 30;
+}
+header #logo {
+  width: 100%;
+  text-align: center;
+}
+header menu {
+  width: 100%;
+  background-color: var(--darkGray);
+  text-align: center;
+  display: none;
+}
+header menu ul li a {
+  display: block;
+}
+header nav {
+  width: 2em;
+  height: 1em;
+  position: absolute;
+  top: calc(32px - 0.5em);
+  right: 1em;
+}
+header nav .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  position: absolute;
+}
+header nav .bar:nth-of-type(2) {
+  top: calc(0.5em - 1px);
+}
+header nav .bar:nth-of-type(3) {
+  top: calc(0.5em - 1px);
+}
+header nav .bar:nth-of-type(4) {
+  bottom: 0;
+}
+
+/* Slide Design */
+#slide {
+  width: 100%;
+  height: calc(43.75vw - 20px);
+  overflow: hidden;
+  position: relative;
+}
+#slide .slide {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#slide .slidebar {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  z-index: 15;
+}
+#slide .push {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  background-color: var(--blackAlpha);
+  color: var(--white);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* About Design */
+#about {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--darkGray);
+  padding: 1em 1em;
+}
+#about .box {
+  width: 280px;
+  padding: 1em;
+  margin: 2em 3em;
+  text-align: center;
+}
+#about .box .icon {
+  font-size: 50px;
+}
+#about .box .icon i {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background-color: var(--darkGray);
+  color: var(--white);
+  border-radius: 10px;
+}
+#about .box h3 {
+  line-height: 2.5em;
+}
+#about .box p {
+  color: var(--lightGray);
+}
+
+/* Works Design */
+#works {
+  width: 100%;
+}
+#works .banner {
+  width: 100%;
+  text-align: center;
+  color: var(--darkGray);
+  padding: 3em 1em;
+  line-height: 3em;
+}
+#works .box {
+  display: flex;
+  flex-wrap: wrap;
+}
+#works .box *[class^=item] {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+#works .box *[class^=item] .push {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--blackAlpha);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#works .box *[class^=item] .push a {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  display: block;
+  background-color: var(--white);
+  margin: 0 0.5em;
+  border-radius: 5px;
+}
+
+/* Service Design */
+#service {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#service .box {
+  width: 33.3333333333%;
+  margin: 2em;
+  text-align: center;
+}
+#service .box .item {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+#service .box .item img {
+  filter: brightness(0.7);
+}
+#service .box .item .push {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  color: var(--white);
+  font-size: 14px;
+}
+
+/*Footer Design*/
+footer {
+  width: 100%;
+  background-color: var(--darkGray);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5em;
+}
+
+@media only screen and (min-width: 414px) {
+  #slide .push {
+    width: 350px;
+    height: 100px;
+    top: 25%;
+  }
+  #about {
+    padding: 1em 4em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  header #logo {
+    width: 30%;
+  }
+  header menu {
+    width: 70%;
+    display: block !important;
+  }
+  header menu ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  header menu ul li a {
+    padding: 0 1em;
+    transition: var(--transition);
+  }
+  header menu ul li:hover a {
+    background-color: var(--mainColor);
+  }
+  header nav {
+    display: none;
+  }
+  #slide .push {
+    width: 390px;
+    height: 120px;
+    padding: 1em;
+    top: 30%;
+    right: 0;
+  }
+  #works .box *[class^=item] {
+    width: 25%;
+  }
+  #works .box *[class^=item] .push {
+    transition: var(--transition);
+    opacity: 0;
+    margin-top: 50px;
+  }
+  #works .box *[class^=item]:hover .push {
+    opacity: 1;
+    margin-top: 0;
+  }
+  #service .box .item img {
+    filter: brightness(1);
+    transition: var(--transition);
+  }
+  #service .box .item .push {
+    font-size: 18px;
+    opacity: 0;
+    transition: var(--transition);
+  }
+  #service .box .item:hover img {
+    filter: brightness(0.6);
+  }
+  #service .box .item:hover .push {
+    opacity: 1;
+  }
+  footer br {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #about {
+    padding: 1em 1em;
+    justify-content: space-evenly;
+  }
+  #about .box {
+    margin: 2em 1em;
+  }
+  #about .box .icon i {
+    transition: var(--transition);
+  }
+  #about .box h3 {
+    transition: var(--transition);
+  }
+  #about .box:hover .icon i {
+    background-color: var(--mainColor);
+  }
+  #about .box:hover h3 {
+    color: var(--mainColor);
+  }
+  #service {
+    padding: 8em 6em;
+  }
+  #service .box {
+    width: 20%;
+    max-width: 280px;
+    margin: 1em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #works .box .itemBig {
+    width: 40%;
+    height: calc(20vw - 5px);
+  }
+  #works .box .itemBig img {
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+  }
+  #works .box .item {
+    width: 20%;
+  }
+}

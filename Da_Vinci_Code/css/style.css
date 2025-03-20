@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.box{
+    width: 300px;
+    font-size: 0;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #9fcafe;
+    border-radius: 10px;
+}
+.box h1{
+    font-size: 30px;
+    text-align: center;
+    line-height: 2em;
+}
+.box input,.box button{
+    width: 100%;
+    font-size: 20px;
+    padding: 0.2em 0.5em;
+    margin: 0.25em 0;
+    text-align: center;
+}
+.box button{
+    width: 50%;
+    background-color: #50effd;
+    border-color: #caffe2;
+    border-style: solid;
+    box-shadow: 2px 2px 2px gray;
+}
+.box button:active{/*滑鼠按下時*/
+    box-shadow: 2px 2px 2px gray inset;
+}
+.box button:disabled{/*關閉使用時*/
+    filter: brightness(1.2) saturate(0.7);
+    box-shadow: none;
+}
+.box input:focus{/*成為焦點時*/
+    outline-color: #0d546c;/* outline等同於border，主要是給input:focus用的 */
+    /* outline-offset: 10px; *//*線框偏移值*/
+}
+.box ul{
+    font-size: 20px;
+    text-align: center;
+    line-height: 2em;
+    list-style: none;
+}
