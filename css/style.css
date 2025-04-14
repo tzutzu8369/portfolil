@@ -241,6 +241,7 @@ header nav .bar:nth-of-type(4).close{
 #theme .push p{
     line-height: 1.8em;
     padding: 0.5rem 0 1.5rem;
+    font-size: 20px;
 }
 
 @keyframes sliding{
